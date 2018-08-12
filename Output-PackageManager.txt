@@ -1,0 +1,24 @@
+﻿
+
+Attempting to gather dependency information for package 'EntityFramework.6.2.0' with respect to project 'Sales.Domain', targeting '.NETFramework,Version=v4.6.1'
+Gathering dependency information took 106,65 ms
+Attempting to resolve dependencies for package 'EntityFramework.6.2.0' with DependencyBehavior 'Lowest'
+Resolving dependency information took 0 ms
+Resolving actions to install package 'EntityFramework.6.2.0'
+Resolved actions to install package 'EntityFramework.6.2.0'
+Retrieving package 'EntityFramework 6.2.0' from 'nuget.org'.
+  GET https://api.nuget.org/v3-flatcontainer/entityframework/6.2.0/entityframework.6.2.0.nupkg
+  OK https://api.nuget.org/v3-flatcontainer/entityframework/6.2.0/entityframework.6.2.0.nupkg 539ms
+Installing EntityFramework 6.2.0.
+Adding package 'EntityFramework.6.2.0' to folder 'C:\Projects\Sales\packages'
+Added package 'EntityFramework.6.2.0' to folder 'C:\Projects\Sales\packages'
+Added package 'EntityFramework.6.2.0' to 'packages.config'
+Executing script file 'C:\Projects\Sales\packages\EntityFramework.6.2.0\tools\init.ps1'...
+Executing script file 'C:\Projects\Sales\packages\EntityFramework.6.2.0\tools\install.ps1'...
+
+Type 'get-help EntityFramework' to see all available Entity Framework commands.
+Successfully installed 'EntityFramework 6.2.0' to Sales.Domain
+Executing nuget actions took 45,2 sec
+Time Elapsed: 00:00:45.6853866
+========== Finished ==========
+
