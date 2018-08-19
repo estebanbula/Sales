@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sales.ViewModels
+﻿namespace Sales.ViewModels
 {
     public class MainVewModel
     {

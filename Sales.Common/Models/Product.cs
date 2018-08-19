@@ -15,7 +15,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0}", this.Description);
+            return this.Description;
         }
     }
 }
