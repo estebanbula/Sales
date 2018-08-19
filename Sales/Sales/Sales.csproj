@@ -19,7 +19,7 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Resoures\Resource.Designer.cs">
+    <Compile Update="Resources\Resource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resource.resx</DependentUpon>
@@ -27,8 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resoures\Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+    <EmbeddedResource Update="Resources\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ProductsPage.xaml">
