@@ -50,5 +50,14 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>Sales</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+	<string>es-CO</string>
+	<string>pt</string>
+	<string>it</string>
+	<string>af-ZA</string>
+	</array>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
 </dict>
 </plist>

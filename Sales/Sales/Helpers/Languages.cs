@@ -4,7 +4,7 @@
     using Interfaces;
     using Resources;
 
-    class Languages
+    public class Languages
     {
         static Languages()
         {
@@ -13,9 +13,29 @@
             DependencyService.Get<ILocalize>().SetLocale(ci);
         }
 
-        public static string Key1
+        public static string Accept
         {
-            get { return Resource.Key1; }
+            get { return Resource.Accept; }
+        }
+
+        public static string Error
+        {
+            get { return Resource.Error; }
+        }
+
+        public static string NoInternet
+        {
+            get { return Resource.NoInternet; }
+        }
+
+        public static string TurnOnInternet
+        {
+            get { return Resource.TurnOnInternet; }
+        }
+
+        public static string Products
+        {
+            get { return Resource.Products; }
         }
     }
 }

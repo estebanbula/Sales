@@ -2,7 +2,7 @@
 {
     using System.Globalization;
 
-    interface ILocalize
+    public interface ILocalize
     {
         CultureInfo GetCurrentCultureInfo();
         void SetLocale(CultureInfo ci);

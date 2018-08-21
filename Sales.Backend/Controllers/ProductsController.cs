@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using Sales.Backend.Models;
-using Sales.Common.Models;
-
-namespace Sales.Backend.Controllers
+﻿namespace Sales.Backend.Controllers
 {
+    using System.Data.Entity;
+    using System.Net;
+    using System.Threading.Tasks;
+    using System.Web.Mvc;
+    using Backend.Models;
+    using Common.Models;
+
     public class ProductsController : Controller
     {
         private LocalDataContext db = new LocalDataContext();
@@ -19,7 +14,7 @@ namespace Sales.Backend.Controllers
         // GET: Products
         public async Task<ActionResult> Index()
         {
-            return View(await db.Products.ToListAsync());
+            return View(await this.db.Products.ToListAsync());
         }
 
         // GET: Products/Details/5
@@ -48,7 +43,7 @@ namespace Sales.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ProductId,Description,Price,IsAvailable,PublishOn")] Product product)
+        public async Task<ActionResult> Create([Bind(Include = "ProductId,Description,Remarks,ImagePath,Price,IsAvailable,PublishOn")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -80,7 +75,7 @@ namespace Sales.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ProductId,Description,Price,IsAvailable,PublishOn")] Product product)
+        public async Task<ActionResult> Edit([Bind(Include = "ProductId,Description,Remarks,ImagePath,Price,IsAvailable,PublishOn")] Product product)
         {
             if (ModelState.IsValid)
             {
