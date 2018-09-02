@@ -132,4 +132,25 @@
   <data name="Products" xml:space="preserve">
     <value>Voeg miniblaaie by</value>
   </data>
+  <data name="AddProduct" xml:space="preserve">
+    <value>miniblad</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beskrywing</value>
+  </data>
+  <data name="DescriptionPlaceholder" xml:space="preserve">
+    <value>Voer produkbeskrywing in ...!</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Prys</value>
+  </data>
+  <data name="PricePlaceholder" xml:space="preserve">
+    <value>Gee die prys van die produk in ...!</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Kommentaar!</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Red!</value>
+  </data>
 </root>
