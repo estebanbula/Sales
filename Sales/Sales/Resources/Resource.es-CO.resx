@@ -162,4 +162,16 @@
   <data name="PriceError" xml:space="preserve">
     <value>¡Debes introducir un precio válido!</value>
   </data>
+  <data name="ImageSource" xml:space="preserve">
+    <value>¿De dónde vas a elegir la foto?</value>
+  </data>
+  <data name="FromGallery" xml:space="preserve">
+    <value>De la galería</value>
+  </data>
+  <data name="NewPicture" xml:space="preserve">
+    <value>Toma una nueva foto</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
 </root>
