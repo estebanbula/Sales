@@ -94,7 +94,7 @@
                     };
                 }
 
-                var obj = JsonConvert.DeserializeObject<List<T>>(answer);
+                var obj = JsonConvert.DeserializeObject<T>(answer);
                 return new Response
                 {
                     IsSuccess = true,

@@ -12,7 +12,7 @@
                 Padding="5">
                 <Image 
                     HorizontalOptions="Center"
-                    Source="noproduct">
+                    Source="{Binding ImageSource}">
                 </Image>
                 <Label
                     FontSize="Small"

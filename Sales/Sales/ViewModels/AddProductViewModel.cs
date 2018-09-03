@@ -10,6 +10,7 @@
     public class AddProductViewModel : BaseViewModel
     {
         #region Attributes
+        private ImageSource imageSource;
         private ApiServices apiService;
         private bool isRunning;
         private bool isEnabled;
@@ -31,11 +32,18 @@
             get { return this.isEnabled; }
             set { this.SetValue(ref this.isEnabled, value); }
         }
+
+        public ImageSource ImageSource
+        {
+            get { return this.imageSource; }
+            set { this.SetValue(ref this.imageSource, value); }
+        }
         #endregion
 
         #region Constructors
         public AddProductViewModel()
         {
+            this.imageSource = "noproduct";
             this.apiService = new ApiServices();
             this.isEnabled = true;
         }
@@ -80,12 +88,12 @@
                 return;
             }
 
-            this.isRunning = true;
+            this.IsRunning = true;
             this.IsEnabled = false;
             var connection = await this.apiService.CheckConnection();
             if (!connection.IsSuccess)
             {
-                this.isRunning = true;
+                this.IsRunning = true;
                 this.IsEnabled = false;
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
@@ -108,7 +116,7 @@
 
             if (!response.IsSuccess)
             {
-                this.isRunning = false;
+                this.IsRunning = false;
                 this.IsEnabled = true;
                 await Application.Current.MainPage.DisplayAlert(
                     Languages.Error,
@@ -117,7 +125,11 @@
                 return;
             }
 
-            this.isRunning = false;
+            var newProduct = (Product)response.Result;
+            var viewModel = ProductsViewModel.GetInstance();
+            viewModel.Products.Add(newProduct);
+
+            this.IsRunning = false;
             this.IsEnabled = true;
             await Application.Current.MainPage.Navigation.PopAsync();
         }
